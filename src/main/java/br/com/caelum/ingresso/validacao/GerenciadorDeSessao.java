@@ -33,7 +33,7 @@ public class GerenciadorDeSessao {
 	}
 		
 	public boolean cabe(Sessao sessaoNova) {
-		return sessoesDaSala.stream().noneMatch(sessaoExistente) -> horarioIsConflitante(sessaoExistente, sessaoNova);
+		return sessoesDaSala.stream().noneMatch(sessaoExistente -> horarioIsConflitante(sessaoExistente, sessaoNova));
 	}
 }
 	
