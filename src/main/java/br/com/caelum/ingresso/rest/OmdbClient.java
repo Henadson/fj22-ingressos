@@ -1,4 +1,4 @@
-package ingresso;
+package br.com.caelum.ingresso.rest;
 
 import java.util.Optional;
 
