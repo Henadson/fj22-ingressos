@@ -9,5 +9,10 @@ public class DescontoParaEstudante implements Desconto {
 		
 		return precoOriginal.divide(new BigDecimal("2.0"));
 	}
+	
+	@Override
+	public String getDescricao() {
+		return "Desconto Estudante";
+	}
 
 }

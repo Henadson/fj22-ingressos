@@ -15,6 +15,11 @@ public class DescontoParaBancos implements Desconto{
 		
 	}
 
+	@Override
+	public String getDescricao() {
+		return "Desconto Banco";
+	}
+
 	
 	
 }
