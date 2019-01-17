@@ -17,10 +17,11 @@ public class OmdbClient {
 		
 		String titulo = filme.getNome().replace(" ", "+");
 		
-		String url = String.format("https://omdb-fj-22.herokuapp.com/movie?title=%s", titulo);
+		String url = String.format("https://omdb-fj22.herokuapp.com/movie?title=%s", titulo);
 		
 		try {
-			return Optional.of(client.getForObject(url, tClass));
+			T response = client.getForObject(url, tClass);
+			return Optional.ofNullable(response);
 			
 		} catch (RestClientException e) {
 			return Optional.empty();
