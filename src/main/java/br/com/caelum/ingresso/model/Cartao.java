@@ -29,6 +29,10 @@ public class Cartao {
 	public void setVencimento(YearMonth vencimento) {
 		this.vencimento = vencimento;
 	}
+	
+	public boolean isValido() {
+		return vencimento.isAfter(YearMonth.now());
+	}
 
 	private YearMonth vencimento;
 
